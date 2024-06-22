@@ -5,7 +5,7 @@ import { legacy_createStore as createStore } from 'redux';
 import './index.css';
 import Game from './containers/Game';
 import reducer from './reducers';
-//import registerServiceWorker from './registerServiceWorker';
+//import * as serviceWorker from './serviceWorker';
 
 const store = createStore(
   reducer,
@@ -19,4 +19,4 @@ root.render(
   </Provider>
 );
 
-//registerServiceWorker();
+//serviceWorker.register();

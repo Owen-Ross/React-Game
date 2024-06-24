@@ -1,0 +1,1 @@
+export const forrestAndGroundWidth = 5000;

@@ -1,19 +1,20 @@
 import React from "react";
+import { forrestAndGroundWidth } from "../utils/constants";
 
 const Forrest = () => {
     const forrestStyle = {
         fill: '#52935a',
     };
 
-    const forrestWidth = 5000;
+    const forrestAndGroundWidth = 5000;
     const gameHeight = 1200;
 
     return (
         <rect
             style={forrestStyle}
-            x={forrestWidth / -2}
+            x={forrestAndGroundWidth / -2}
             y={100 - gameHeight}
-            width={forrestWidth}
+            width={forrestAndGroundWidth}
             height={gameHeight}
         />
     );

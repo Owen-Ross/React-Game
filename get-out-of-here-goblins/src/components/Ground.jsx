@@ -3,11 +3,11 @@ import { forrestAndGroundWidth } from "../utils/constants";
 
 const Ground = () => {
     const groundStyle = {
-        fill: '#59a941',
+        fill: '#754f3d',
     };
 
     const division = {
-        stroke: '#458232',
+        stroke: '#3e6f43',
         strokeWidth: '3px',
     };
 

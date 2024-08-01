@@ -1,10 +1,10 @@
 import React from "react";
 import { pathFromBezierCurve } from "../utils/formulas";
 
-const CannonBase = (props) => {
+const CannonBase = () => {
     const cannonBaseStyle = {
-        fill: '#cacaca',
-        stroke: '#747474',
+        fill: '#ffffff',
+        stroke: '#000000',
         strokeWidth: '2px',
     };
 
@@ -37,6 +37,7 @@ const CannonBase = (props) => {
 
     return (
         <g>
+            {/* Add segments to the cannon base */}
             <path
                 style={cannonBaseStyle}
                 d={pathFromBezierCurve(cubicBezierCurve)}
@@ -48,6 +49,9 @@ const CannonBase = (props) => {
                 y2={height}
                 style={cannonBaseStyle}
             />
+            {/* Add joints */}
+            <circle cx={-halfBase} cy={height} r={10} fill="#000" />
+            <circle cx={halfBase} cy={height} r={10} fill="#000" />
         </g>
     );
 };

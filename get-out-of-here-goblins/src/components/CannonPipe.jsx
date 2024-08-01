@@ -4,8 +4,8 @@ import { pathFromBezierCurve } from '../utils/formulas';
 
 const CannonPipe = (props) => {
   const cannonPipeStyle = {
-    fill: '#999',
-    stroke: '#666',
+    fill: '#ffffff',
+    stroke: '#000000',
     strokeWidth: '2px',
   };
   const transform = `rotate(${props.rotation}, 0, 0)`;
@@ -36,6 +36,7 @@ const CannonPipe = (props) => {
 
   return (
     <g transform={transform}>
+      {/* Add segments to the cannon pipe */}
       <path
         style={cannonPipeStyle}
         d={pathFromBezierCurve(cubicBezierCurve)}
@@ -47,6 +48,9 @@ const CannonPipe = (props) => {
         y2={-yBasis}
         style={cannonPipeStyle}
       />
+      {/* Add joints */}
+      <circle cx={-halfMuzzle} cy={-yBasis} r={10} fill="#000" />
+      <circle cx={halfMuzzle} cy={-yBasis} r={10} fill="#000" />
     </g>
   );
 };
